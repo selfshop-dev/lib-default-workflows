@@ -31,12 +31,11 @@ Workflows из этого репо можно вызывать из любого
 ### CI
 
 ```yaml
-# В твоём репо: .github/workflows/ci.yml
+# .github/workflows/ci.yml
 jobs:
   ci:
     uses: selfshop-dev/.github/.github/workflows/ci.yml@main
-    secrets:
-      codecov-token: ${{ secrets.CODECOV_TOKEN }}
+    secrets: inherit  # пробрасывает все секреты организации и другие репо
 ```
 
 ### Security (Trivy)
