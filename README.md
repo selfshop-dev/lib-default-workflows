@@ -35,12 +35,13 @@ Workflows из этого репо можно вызывать из любого
 jobs:
   ci:
     uses: selfshop-dev/.github/.github/workflows/ci.yml@main
-    secrets: inherit  # пробрасывает все секреты организации и другие репо
+    secrets: inherit  # пробрасывает все секреты организации в другие репо
 ```
 
 ### Security (Trivy)
 
 ```yaml
+# .github/workflows/security.yml
 jobs:
   security:
     uses: selfshop-dev/.github/.github/workflows/security.yml@main
@@ -49,6 +50,7 @@ jobs:
 ### CodeQL
 
 ```yaml
+# .github/workflows/codeql.yml
 jobs:
   codeql:
     uses: selfshop-dev/.github/.github/workflows/codeql.yml@main
