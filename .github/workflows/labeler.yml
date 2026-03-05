@@ -1,17 +1,7 @@
 name: Labeler
 
 on:
-  pull_request_target:
-    types: [ opened, reopened, synchronize, edited ]
-    branches: [ main, dev ]
-  pull_request:
-    types: [ opened, reopened, synchronize, edited ]
-    branches: [ main, dev ]
-
-  issues:
-    types: [ opened, edited ]
-  issue_comment:
-    types: [ created, edited ]
+  workflow_call:
 
 permissions:
   contents: read

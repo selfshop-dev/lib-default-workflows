@@ -1,12 +1,7 @@
 name: Security
 
 on:
-  schedule:
-    - cron: '0 9 * * 1'
-  push:
-    branches: [ main, dev ]
-  pull_request:
-    branches: [ main, dev ]
+  workflow_call:
 
 permissions:
   security-events: write

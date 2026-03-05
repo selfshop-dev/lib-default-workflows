@@ -1,8 +1,7 @@
 name: Block non-dev PRs to main
 
 on:
-  pull_request:
-    branches: [ main ]
+  workflow_call:
 
 permissions:
   contents: read
